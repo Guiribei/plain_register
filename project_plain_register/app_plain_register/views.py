@@ -18,3 +18,9 @@ def users(request):
 		'users': User.objects.all()
 	}
 	return render(request, 'users/users.html', users)
+
+def confirm_delete_all(request):
+    if request.method == 'POST':
+        User.objects.all().delete()
+        return render(request, 'users/home.html')
+    return render(request, 'users/confirm_delete_all.html')
