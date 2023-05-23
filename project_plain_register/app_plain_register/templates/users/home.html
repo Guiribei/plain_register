@@ -1,0 +1,10 @@
+{% extends 'users/base.html' %}
+{% block content %}
+<h1>Register a User</h1>
+<form action="{% url 'users_list' %}" method="post">
+	{% csrf_token %}
+	<input name="name" type="text" placeholder="Enter Name" required>
+	<input name="age" type="text" placeholder="Enter Age" required>
+	<input type="submit" value="Register">
+</form>
+{% endblock %}

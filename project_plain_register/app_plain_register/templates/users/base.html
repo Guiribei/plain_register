@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Register</title>
+        <style>
+            body {
+                background: radial-gradient(circle, rgb(235, 219, 239), rgb(68, 3, 137));
+                font-family: Arial, sans-serif;
+                color: white;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            h1 {
+                font-size: 2em;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background-color: indigo;
+                padding: 10px;
+                color: rgb(244, 225, 247);
+                font-size: 1.2em;
+                text-align: center;
+            }
+
+            form {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            input[type="text"], input[type="submit"] {
+                padding: 10px;
+                margin-bottom: 10px;
+                font-size: 1em;
+                border: none;
+                border-radius: 5px;
+            }
+
+            input[type="text"] {
+                background: white;
+                color: black;
+            }
+
+            input[type="submit"] {
+                background: indigo;
+                color: white;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+                background: #ddd;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            Users Database
+        </div>
+        {% block content%}
+		
+		{% endblock %}
+    </body>
+</html>
